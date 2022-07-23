@@ -1,0 +1,147 @@
+{% load static %}
+<html lang="en-us">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+
+  <link href="{% static 'community-frontend/assets/hackerrank_r_old_trimmed-485d5ead.css'%}" media="all" rel="stylesheet">
+
+
+
+
+  <meta charset="utf-8" />
+
+  <title>Solve Python | HackerRank</title>
+  <meta name="description" id="meta-description"
+    content="Join over 16 million developers in solving code challenges on HackerRank, one of the best ways to prepare for programming interviews." />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="{% static 'community-frontend/assets/favicon-ddc852f75a.png'%}" />
+
+
+
+  <link rel="stylesheet" type="text/css"
+    href="{% static 'community-frontend/assets/modules_hackerrank_r_community_hackerrank_r_krackjack_hackerrank_r_testinvite_hackerrank_r_testquest_9083c7e4-186ce288.css'%}">
+
+  
+
+
+  <link rel="stylesheet" type="text/css" href="{% static 'community-frontend/assets/hackerrank_r_community-24514c1d.css'%}">
+
+  <link rel="stylesheet" type="text/css"
+    href="{% static 'community-frontend/assets/commons_hackerrank_r_challenge_list_hackerrank_r_challenge_list_v2_hackerrank_r_interview_hackerrank_c9c76048-11584cb1.css'%}">
+
+  <link rel="stylesheet" type="text/css"
+    href="{% static 'community-frontend/assets/commons_hackerrank_r_challenge_list_hackerrank_r_challenge_list_v2_hackerrank_r_interview-3ebdacc0.css'%}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'community-frontend/assets/hackerrank_r_challenge_list-933a4e2e.css'%}">
+
+
+
+
+
+</head>
+
+<body id="hr_v2" class="hr-community">
+
+
+
+
+  <div id="fb-root"></div>
+
+
+  <!-- Just a placeholder div to start loading open sans and source code loader -->
+  <div class="font-open-sans-loader"></div>
+  <div class="font-source-code-loader"></div>
+  <!-- Just a placeholder div to start loading open sans and source code loader end -->
+
+  <div id="content">
+    <div class="ui-kit-root">
+      <div class="body-wrap community-page domains-page challengelist-page domainchallengelist-page">
+        <div class="show-cookie-banner">
+          <div class="cookie-banner-wrapper">
+            <div class="cookie-container">
+
+
+            </div>
+          </div>
+          <div class="theme-m new-design">
+            <div class="page-header-wrapper theme-m-section">
+              <nav class="community-header">
+                <div class="container">
+                  <div class="header-nav-links theme-m-section">
+                    <ul class="nav-links">
+                      <li class="nav-link-item logo-wrap"><a data-analytics="NavBarLogo" data-attr1="/"
+                          data-automation="logo-link" href="/">
+                          <img alt="HackerRank" class="logo" width="45%" height="50%" src="{% static 'community-frontend/assets/favicon-ddc852f75a.png'%}" />
+                          
+                          <!-- <img id="feed-intro" class="logo-img-small" alt="Hackerrank Home" /></a></li> -->
+                      <li class="nav-link-item"><a class="nav-link active" data-analytics="NavBarDomains"
+                          data-automation="dashboard-link"
+                          href="/"><span>Prepare</span>
+
+                        </a></li>
+
+                    </ul>
+                  </div>
+                  <div class="nav-buttons theme-m-section">
+                    <ul class="pull-left psR">
+                      <li class="search-input-container input-icon main-hr-search" id="search-span">
+                        <div class="search-form new-search">
+                          <div>
+                            <div class="search-query asyn-autocomplete autocomplete">
+                              <form class="form" action="/" method = "get">
+                              <div class="ac-input-wrap cf"><input autoComplete="off" class="ac-input " value=""
+                                  placeholder="Search" name = "search-query" />
+                                  <input hidden type = "submit" value = "search" >
+                                </form>
+                                </div>
+                                  
+                            </div><i class="ui-icon-search"></i>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="pull-left nav-wrap 
+          mmL">
+                    {% if request.user.is_authenticated %}
+
+                    <li class="nav-btn button-item">  <a href="/logout"> <button class="nav-signup pull-right btn btn-primary mmT"
+                          data-analytics="NavBarSignupIcon">
+                          <!-- -->Logout
+                        </button>
+                        
+                        </a>
+
+                        <li class="nav-btn button-item">  <a href="/profile"> <button class="nav-signup pull-right btn btn-primary mmT"
+                          data-analytics="NavBarSignupIcon">
+                          <!-- -->{{user.username}}
+                        </button>
+                        
+                        </a>
+                        
+                      </li>
+                    {% else %}
+                      <li class="nav-btn button-item"> <a href="/login"> <button class="login pull-right btn btn-dark btn-default mmT"
+                          data-analytics="NavBarLoginIcon">
+                          <!-- -->Log In
+                          <!-- -->
+                        </button>
+                        </a>
+                      </li>
+                      <li class="nav-btn button-item">  <a href="/register"> <button class="nav-signup pull-right btn btn-primary mmT"
+                          data-analytics="NavBarSignupIcon">
+                          <!-- -->Sign Up
+                        </button>
+                        </a>
+                      </li>
+
+                       
+                      
+                      {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>

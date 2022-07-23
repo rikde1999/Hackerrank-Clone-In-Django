@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'navbar.html' %}
+
+
+<header class="community-header-breadcrumb">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center content-header-wrapper">
+      <div class="community-header-breadcrumb-items">
+        <ol itemType="http://schema.org/BreadcrumbList" class="community-breadcrumb text-content ellipsis">
+
+        </ol>
+        <div class="page-label-wrapper text-headline">
+          <h1 class="page-label">Python</h1>
+        </div>
+      </div>
+      <div class="community-header-aside"></div>
+    </div>
+  </div>
+</header>
+
+<div class="container"></div>
+<div class="community-content">
+  <div id="new-challenge-list" class="b4 new-challenge-list">
+    <div class="container">
+      <header class="challenge-list-header clearfix"></header>
+      <div class="content-container panes-container">
+        <section class="list-container left-pane">
+          <div>
+            {% for i in post %}
+            <div class="challenges-list"><a class="js-track-click challenge-list-item"
+                data-analytics="ChallengeListChallengeName" data-js-track="Challenge-Title" data-attr1="py-hello-world"
+                data-attr3="code" data-attr7="5" data-attr-10="0.9" data-attr11="false" href="/ques/{{i.id}}">
+                <div class="single-item challenges-list-view-v2 first-challenge cursor">
+
+
+                  <div id="contest-challenges-problem"
+                    class="individual-challenge-card-v2 content--list-v2 track_content">
+                    <div class="content--list_body">
+
+                      <header class="content--list_header-v2">
+                        <div class="challenge-name-details ">
+                          <div class="pull-left inline-block">
+
+                            <h4 class="challengecard-title">{{i.title}}!&quot; With Python<div class="card-details pmT">
+                                <span class="difficulty easy detail-item">Easy</span><span
+                                  class="max-score detail-item">Max Score: 5</span><span
+                                  class="success-ratio detail-item">Success Rate: 97.17%</span></div>
+                            </h4>
+
+                          </div>
+
+
+                        </div>
+
+                        <span class="bookmark-cta">
+
+                        </span>
+
+                        <div class="cta-container">
+                          <div class="ctas">
+
+                            <div class="challenge-submit-btn"><button
+                                class="ui-btn ui-btn-normal primary-cta ui-btn-line-primary ui-btn-styled">
+
+                                <div class="ui-content align-icon-right"><span class="ui-text" aria-hidden="false"> <a
+                                      href="/tosolve/{{i.id}}">Solve Challenge</span>
+              </a>
+
+            </div>
+
+
+
+            </button>
+
+            <div class="challenge-submit-btn"><button
+                class="ui-btn ui-btn-normal primary-cta ui-btn-line-primary ui-btn-styled">
+
+                <div class="ui-content align-icon-right"><span class="ui-text" 
+                                                aria-hidden=" false"> <a href="/view/{{i.id}}">View Code</span>
+                  </a>
+
+                </div>
+
+
+
+              </button>
+
+            </div>
+
+            </a>
+
+          </div>
+
+      </div>
+
+      </header>
+
+    </div>
+
+  </div>
+  {% endfor %}
+
+
+
+  <div class="__react_component_tooltip place-top type-dark " data-id="tooltip"></div>
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="filter-section right-pane">
+  <div class="sticky-outer-wrapper">
+    <div class="sticky-inner-wrapper" style="position:relative;top:0px">
+      <div class="filter-wrap">
+        <section class="challenge-list-filter">
+          <div class="filter-group">
+            <div class="group-label">Status</div>
+            <div class="filters">
+              <div class="ui-checklist" role="group">
+                <div class="ui-checklist-list">
+                  <div class="ui-checklist-list-item">
+                    <div class="ui-checklist-item-wrap">
+                      <form action="/" method="post">
+                        {% csrf_token %}
+                        <div class="ui-checkbox theme-m"><label class="label-wrap">
+                            <div class="checkbox-wrap"><input type="checkbox" class="checkbox-input" value="1"
+                                name="checks[]" /><span class="custom-holder outset"><svg viewBox="0 0 24 24" width="1em"
+                                  height="1em" class="checkbox__check-icon ui-svg-icon" fill="currentColor">
+                                  <path
+                                    d="M9 18c-.3 0-.5-.1-.7-.3l-5-5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 15.6 19.3 5.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-11 11c-.2.2-.4.3-.7.3z">
+                                  </path>
+                                </svg></span></div>
+                            <div class="label">Unsolved</div>
+                          </label>
+
+
+                        </div>
+                    </div>
+
+
+
+                  </div>
+
+                  <div class="ui-checklist-list-item">
+                    <div class="ui-checklist-item-wrap">
+                      <div class="ui-checkbox theme-m"><label class="label-wrap">
+                          <div class="checkbox-wrap"><input type="checkbox" class="checkbox-input" value="2"
+                              name="checks[]" /><span class="custom-holder outset"><svg viewBox="0 0 24 24" width="1em"
+                                height="1em" class="checkbox__check-icon ui-svg-icon" fill="currentColor">
+                                <path
+                                  d="M9 18c-.3 0-.5-.1-.7-.3l-5-5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 15.6 19.3 5.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-11 11c-.2.2-.4.3-.7.3z">
+                                </path>
+                              </svg></span></div>
+                          <div class="label">Solved</div>
+
+                        </label>
+                      </div>
+                      <button type="submit"
+                        style="position: absolute; top: 120%; left : -0px ;width: 50% ; display: inline-block; margin : 1% ">submit
+                      </button>
+                      </form>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          </body>
+
+
+          </html>
